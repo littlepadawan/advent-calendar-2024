@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f3e9; /* Festive background */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Advent calendar container */
+  .advent-calendar {
+    position: relative;
+    width: 1540px; /* Match the width of the tree image */
+    height: 1200px; /* Match the height of the tree image */
+    display: grid;
+    grid-template-rows: repeat(16, 1fr); /* Divide into 16 rows */
+    overflow: visible; /* Allow content to spill outside */
+  }
+  
+ .row {
+    border: 1px solid black;
+    display: flex; /* Flex for horizontal alignment */
+    align-items: flex-end; /* Align items to the bottom of the row */
+    height: auto; /* Allow rows to size based on their content */
+ }
+
+ .row.hill img {
+    width: 100%; /* Make the hill fill the row's width */
+    height: auto; /* Maintain the natural aspect ratio */
+    position: relative; /* Allow for overlap with the row */
+    
+  }
+
+  .row.houses img {
+    width: auto;
+    height: auto; /* Maintain the natural aspect ratio */
+    position: relative; /* Allow for overlap with the row */
+    margin: 0;
+  }
+
+
+  .row[data-layer="2"] {
+    background-color: yellow;
+    margin-bottom: -635px;
+    justify-content: right;
+  }
+
+  #house-3 {
+    width: 26.7%;
+    margin-right: -50px;
+    margin-bottom: 20px;
+  }
+  
+  #house-14 {
+    width: 24%;
+    margin-right: -50px;
+  }
+  #house-23 {
+    width: 26%;
+  }
+  
+  .row[data-layer="3"] {
+    background-color: green;
+    margin-bottom: -620px;
+  }
+  
+  .row[data-layer="4"] {
+    background-color: blue;
+    margin-bottom: -360px;
+  }
+  
+  #house-19 {
+    width: 24%;
+    margin-bottom: 50px;
+    margin-left: 40px;
+  }
+
+  #house-1 {
+    width: 21.8%;
+    margin-left: -70px;
+  }
+
+  #house-21 {
+    margin-bottom: 120px;
+    margin-left: -30px;
+  }
+
+  #house-13 {
+    /* margin-right: -300px; */
+    margin-bottom: 90px;
+}
+
+#house-10 {
+    margin-left: 1220px;
+    margin-right: -80px;
+    margin-bottom: 90px;
+  }
+
+  .row[data-layer="5"] {
+    background-color: red;
+    margin-bottom: -1220px;
+  }
+
+  .row[data-layer="6"] {
+    background-color: purple;
+    margin-bottom: -520px;
+  }
+  
+  #house-17 {
+    margin-left: 940px;;
+
+  }
+
+  .row[data-layer="7"] {
+    background-color: orange;
+    margin-bottom: -1120px;
+  }
+  
+  .row[data-layer="8"] {
+    background-color: pink;
+    margin-bottom: -360px;
+  }
+
+  #house-6 {
+    margin-bottom: 45px;
+  }
+
+  #house-12 {
+    margin-left: -75px;
+  }
+
+  #house-4 {
+    margin-left: -80px;
+    margin-bottom: 30px;
+  }
+
+  .row[data-layer="9"] {
+    background-color: brown;
+    margin-bottom: -1090px;
+  }
+
+  .row[data-layer="10"] {
+    background-color: grey;
+    margin-bottom: -390px;
+  }
+
+  #house-18 {
+    margin-bottom: 200px;
+  }
+
+  #house-15 {
+    margin-left: 360px;
+    margin-bottom: -100px;
+  }
+
+  #house-11 {
+    margin-left: -80px;
+    margin-bottom: -30px;
+  }
+
+  .row[data-layer="11"] {
+    background-color: blueviolet;
+    margin-bottom: -1080px;
+  }
+
+  .row[data-layer="12"] {
+    background-color: darkgreen;
+    margin-bottom: -330px;
+  }
+
+  #house-5 {
+    margin-left: 480px;
+  }
+
+  .row[data-layer="13"] {
+    background-color: darkred;
+    margin-bottom: -900px;
+  }
+
+  .row[data-layer="14"] {
+    background-color: darkblue;
+    margin-bottom: -450px;
+  }
+
+  #house-20 {
+    margin-left: 1000px;
+  }
+
+  #house-8 {
+    margin-left: -55px;
+    margin-bottom: -75px;
+  }
+
+  #house-22 {
+    margin-bottom: -100px;
+  }
+
+  .row[data-layer="15"] {
+    background-color: darkorange;
+    margin-bottom: -850px;
+  }
+
+  .row[data-layer="16"] {
+    background-color: purple;
+    margin-bottom: -240px;
+  }
+
+  #house-24 {
+    margin-left: 40px;
+  }
+
+  #house-7 {
+    margin-left: 70px;
+    margin-bottom: -85px;
+  }
+
+  #house-2 {
+    width: 15.5%
+  }
+
+  
