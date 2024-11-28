@@ -3,19 +3,18 @@ body {
     padding: 0;
     background-color: #f8f3e9; /* Festive background */
     font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
   }
   
   /* Advent calendar container */
   .advent-calendar {
-    position: relative;
-    width: 1540px; /* Match the width of the tree image */
-    height: 1200px; /* Match the height of the tree image */
+    display: block;
+    /* width: 1747px;  */
+    width: 1875px; /*Match the width of the tree image*/
+    /* height: 1200px; Match the height of the tree image */
+    margin: 0 auto;
+    padding: 0 64px 0 64px;
     display: grid;
-    grid-template-rows: repeat(16, 1fr); /* Divide into 16 rows */
+    grid-template-rows: repeat(17, auto); /* Divide into 16 rows */
     overflow: visible; /* Allow content to spill outside */
   }
   
@@ -23,201 +22,281 @@ body {
     border: 1px solid black;
     display: flex; /* Flex for horizontal alignment */
     align-items: flex-end; /* Align items to the bottom of the row */
-    height: auto; /* Allow rows to size based on their content */
+    /* height': auto; Allow rows to size based on their content */
+    /* width:1534px; */
  }
 
  .row.hill img {
-    width: 100%; /* Make the hill fill the row's width */
+    width: 100%; /*Make the hill fill the row's width*/
     height: auto; /* Maintain the natural aspect ratio */
     position: relative; /* Allow for overlap with the row */
     
   }
 
   .row.houses img {
-    width: auto;
-    height: auto; /* Maintain the natural aspect ratio */
+    /* width: auto; */
+    /* height: auto; Maintain the natural aspect ratio */
     position: relative; /* Allow for overlap with the row */
     margin: 0;
   }
 
 
+  
   .row[data-layer="2"] {
-    background-color: yellow;
-    margin-bottom: -635px;
+    /* background-color: yellow; */
+    position:relative;
     justify-content: right;
+    margin-bottom: -600px;
+    
   }
-
+  
   #house-3 {
-    width: 26.7%;
-    margin-right: -50px;
-    margin-bottom: 20px;
+    /* width: 26.7%; */
+    width: 412px;
+    margin-right: -100px;
+    margin-bottom: 40px;
   }
   
   #house-14 {
-    width: 24%;
-    margin-right: -50px;
+    width: 369px;
+    margin-bottom: -50px;
+    /* margin-right: -50px; */
   }
   #house-23 {
-    width: 26%;
+    /* width: 21.6%; */
+    width: 333px;
+    margin-bottom: -40px;
+    margin-right: 140px;
   }
   
   .row[data-layer="3"] {
-    background-color: green;
-    margin-bottom: -620px;
+    /* background-color: green; */
+    position:relative;
+    margin-bottom: -820px;
   }
   
   .row[data-layer="4"] {
-    background-color: blue;
-    margin-bottom: -360px;
+    /* background-color: blue; */
+    position:relative;
+    margin-bottom: -310px;
+  }
+  
+  #extra-layer-4 {
+    position:relative;
+    justify-content: right;
+    /* background-color: blue; */
+    
+    /* margin-bottom: -360px; */
   }
   
   #house-19 {
-    width: 24%;
-    margin-bottom: 50px;
-    margin-left: 40px;
+    width: 369px;
+    margin-bottom: 100px;
+    margin-left: 120px;
   }
+  
 
   #house-1 {
-    width: 21.8%;
-    margin-left: -70px;
+    /* width: 21.8%; */
+    width: 337px;
+    margin-left: -60px;
+    margin-bottom: -40px;
   }
-
+  
   #house-21 {
-    margin-bottom: 120px;
-    margin-left: -30px;
+    width: 355px;
+    margin-bottom: 45px;
+    margin-left: -50px;
   }
-
+  
   #house-13 {
-    /* margin-right: -300px; */
-    margin-bottom: 90px;
-}
-
-#house-10 {
-    margin-left: 1220px;
+    width: 239px;
+    margin-bottom: 55px;
+    margin-right: 120px;
+  }
+  
+  #house-10 {
+    width: 401px;
     margin-right: -80px;
-    margin-bottom: 90px;
+    margin-bottom: 45px;
   }
-
+  
   .row[data-layer="5"] {
-    background-color: red;
-    margin-bottom: -1220px;
+    /* background-color: red; */
+    margin-bottom: -1230px;
   }
-
+  
   .row[data-layer="6"] {
-    background-color: purple;
-    margin-bottom: -520px;
+    /* background-color: purple; */
+    justify-content: right;
+    margin-bottom: -540px;
   }
   
   #house-17 {
-    margin-left: 940px;;
-
+    width: 346px;
+    margin-right: 560px;;
+    
   }
-
+  
   .row[data-layer="7"] {
-    background-color: orange;
-    margin-bottom: -1120px;
+    /* background-color: orange; */
+    margin-bottom: -1050px;
   }
   
   .row[data-layer="8"] {
-    background-color: pink;
-    margin-bottom: -360px;
+    /* background-color: pink; */
+    margin-bottom: -410px;
   }
-
+  
   #house-6 {
-    margin-bottom: 45px;
+    /* width: 15.5%; */
+    width: 239px;
+    margin-left: 115px;
   }
-
+  
   #house-12 {
+    width: 401px;
     margin-left: -75px;
   }
-
+  
   #house-4 {
-    margin-left: -80px;
-    margin-bottom: 30px;
+    /* height: 21.6%; */
+    width: 325px;
+    margin-left: -100px;
+    margin-bottom: 40px;
   }
-
+  
   .row[data-layer="9"] {
-    background-color: brown;
-    margin-bottom: -1090px;
+    /* background-color: brown; */
+    margin-bottom: -1100px;
   }
 
   .row[data-layer="10"] {
-    background-color: grey;
-    margin-bottom: -390px;
+    /* background-color: grey; */
+    margin-bottom: -395px;
   }
+  /* START HERE */
 
   #house-18 {
+    width: 556px;
     margin-bottom: 200px;
+    margin-left: 110px;
   }
-
+  
   #house-15 {
-    margin-left: 360px;
-    margin-bottom: -100px;
+    width: 342px;
+    margin-left: 340px;
+    margin-bottom: -50px;
   }
 
   #house-11 {
-    margin-left: -80px;
-    margin-bottom: -30px;
+    width: 520px;
+    margin-left: -140px;
+    margin-bottom: 30px;
   }
 
   .row[data-layer="11"] {
-    background-color: blueviolet;
-    margin-bottom: -1080px;
+    /* background-color: blueviolet; */
+    margin-bottom: -1050px;
   }
 
   .row[data-layer="12"] {
-    background-color: darkgreen;
-    margin-bottom: -330px;
+    /* background-color: darkgreen; */
+    margin-bottom: -280px;
   }
 
   #house-5 {
-    margin-left: 480px;
+    /* width: 23.9%; */
+    width: 369px;
+    margin-left: 668px;
   }
 
   .row[data-layer="13"] {
-    background-color: darkred;
-    margin-bottom: -900px;
+    /* background-color: darkred; */
+    margin-bottom: -920px;
   }
 
   .row[data-layer="14"] {
-    background-color: darkblue;
-    margin-bottom: -450px;
+    /* background-color: darkblue; */
+    margin-bottom: -600px;
+    justify-content: right;
   }
 
   #house-20 {
-    margin-left: 1000px;
+    width: 301px; 
+    margin-right: -50px;
+    margin-bottom: 120px;
   }
 
   #house-8 {
-    margin-left: -55px;
-    margin-bottom: -75px;
+    /* width: 18.1%; */
+    width: 273px;
+    margin-right: -70px;
+    margin-bottom: 95px;
   }
 
   #house-22 {
-    margin-bottom: -100px;
+    width: 401px;
+    margin-right: 180px;
+    /* margin-bottom: -100px; */
   }
 
   .row[data-layer="15"] {
-    background-color: darkorange;
-    margin-bottom: -850px;
+    /* background-color: darkorange; */
+    margin-bottom: -820px;
   }
 
   .row[data-layer="16"] {
-    background-color: purple;
-    margin-bottom: -240px;
+    /* background-color: purple; */
+    justify-content: right;
+    margin-bottom: -280px;
   }
 
   #house-24 {
-    margin-left: 40px;
+    width: 401px;
+    margin-right: 70px;
+    margin-bottom: 30px;
   }
 
   #house-7 {
-    margin-left: 70px;
-    margin-bottom: -85px;
+    /* width: 20.9%; */
+    width: 322px;
+    margin-bottom: -55px;
+    margin-right: -65px;
   }
-
+  
   #house-2 {
-    width: 15.5%
+    /* width: 15.5% */
+    width: 239px;
+    margin-right: 30px;
+    margin-bottom: 60px;
+  }
+  
+  #house-9 {
+    width: 311px;
+    margin-bottom: 120px;
+    margin-left: -80px;
+    margin-right: 40px;
   }
 
+  #house-16 {
+    width: 520px;
+    margin-bottom: 220px;
+    margin-right: 20px;
+  }
+
+  .row[data-layer="17"] {
+    background-color: violet;
+    height: 700px;
+  }
+  
+  
+
+  .lights {
+    position: absolute;
+    width: 1875px;
+    margin: 0 auto;
+    /* left: 10px; */
+    top: 290px;
+  }
   
