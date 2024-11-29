@@ -114,3 +114,8 @@ function initializeSnow () {
 
     generateSnowflakes();
 };
+
+document.querySelector('.advent-calendar').addEventListener('mousemove', function(e) {
+    const element = document.elementFromPoint(e.clientX, e.clientY);
+    console.log('Hovered element:', element);
+  });
