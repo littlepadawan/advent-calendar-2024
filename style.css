@@ -1,71 +1,66 @@
+html,body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #f8f3e9; /* Festive background */
+  background-color: #f8f3e9; 
   font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
-/* Advent calendar container */
 .advent-calendar {
   display: block;
-  /* width: 1747px;  */
-  width: 1875px; /*Match the width of the tree image*/
-  /* height: 1200px; Match the height of the tree image */
+  width: 1875px;
   margin: 0 auto;
   padding: 0 64px 0 64px;
+
   display: grid;
-  grid-template-rows: repeat(17, auto); /* Divide into 16 rows */
-  overflow: visible; /* Allow content to spill outside */
+  grid-template-rows: repeat(17, auto); 
+  
+  overflow: visible;
+
   background-image: url(./assets/images/skyes/day.png);
-  background-repeat: no-repeat; /* Prevent the background from repeating */
-  background-size: cover; /* Adjust the size of the background */
+  background-repeat: no-repeat; 
+  background-size: cover; 
   background-size: calc(100% - 155px) auto;
   background-position: 75px top;
 }
 
 .row {
- /* border: 1px solid black; */
-  display: flex; /* Flex for horizontal alignment */
-  align-items: flex-end; /* Align items to the bottom of the row */
-  /* height': auto; Allow rows to size based on their content */
-  /* width:1534px; */
+  display: flex; 
+  align-items: flex-end; 
 }
 
 .row.hill img {
-  width: 100%; /*Make the hill fill the row's width*/
-  height: auto; /* Maintain the natural aspect ratio */
-  position: relative; /* Allow for overlap with the row */
+  width: 100%; 
+  height: auto;
+  position: relative; 
   pointer-events: none;
-  
 }
 
 .hill {
   pointer-events: none;
-  /* border: 1px solid green; */
 }
 
 .row.houses img {
-  /* width: auto; */
-  /* height: auto; Maintain the natural aspect ratio */
-  position: relative; /* Allow for overlap with the row */
+  position: relative; 
   margin: 0;
 }
 
 .house {
-  border: 1px solid red;
   cursor: pointer;
 }
 
 .row[data-layer="2"] {
-  /* background-color: yellow; */
   position:relative;
   justify-content: right;
   margin-bottom: -600px;
-  
 }
 
 #house-3 {
-  /* width: 26.7%; */
   width: 412px;
   margin-right: -100px;
   margin-bottom: 40px;
@@ -74,23 +69,19 @@ body {
 #house-14 {
   width: 369px;
   margin-bottom: -50px;
-  /* margin-right: -50px; */
 }
 #house-23 {
-  /* width: 21.6%; */
   width: 333px;
   margin-bottom: -40px;
   margin-right: 140px;
 }
 
 .row[data-layer="3"] {
-  /* background-color: green; */
   position:relative;
   margin-bottom: -820px;
 }
 
 .row[data-layer="4"] {
-  /* background-color: blue; */
   position:relative;
   margin-bottom: -310px;
 }
@@ -98,9 +89,6 @@ body {
 #extra-layer-4 {
   position:relative;
   justify-content: right;
-  /* background-color: blue; */
-  
-  /* margin-bottom: -360px; */
 }
 
 #house-19 {
@@ -109,9 +97,7 @@ body {
   margin-left: 120px;
 }
 
-
 #house-1 {
-  /* width: 21.8%; */
   width: 337px;
   margin-left: -60px;
   margin-bottom: -40px;
@@ -136,12 +122,10 @@ body {
 }
 
 .row[data-layer="5"] {
-  /* background-color: red; */
   margin-bottom: -1230px;
 }
 
 .row[data-layer="6"] {
-  /* background-color: purple; */
   justify-content: right;
   margin-bottom: -540px;
 }
@@ -154,17 +138,14 @@ body {
 }
 
 .row[data-layer="7"] {
-  /* background-color: orange; */
   margin-bottom: -1050px;
 }
 
 .row[data-layer="8"] {
-  /* background-color: pink; */
   margin-bottom: -410px;
 }
 
 #house-6 {
-  /* width: 15.5%; */
   width: 239px;
   margin-left: 115px;
 }
@@ -175,22 +156,18 @@ body {
 }
 
 #house-4 {
-  /* height: 21.6%; */
   width: 325px;
   margin-left: -100px;
   margin-bottom: 40px;
 }
 
 .row[data-layer="9"] {
-  /* background-color: brown; */
   margin-bottom: -1100px;
 }
 
 .row[data-layer="10"] {
-  /* background-color: grey; */
   margin-bottom: -395px;
 }
-/* START HERE */
 
 #house-18 {
   width: 556px;
@@ -211,40 +188,34 @@ body {
 }
 
 .row[data-layer="11"] {
-  /* background-color: blueviolet; */
   margin-bottom: -1050px;
 }
 
 .row[data-layer="12"] {
-  /* background-color: darkgreen; */
   margin-bottom: -280px;
 }
 
 #house-5 {
-  /* width: 23.9%; */
   width: 369px;
   margin-left: 668px;
 }
 
 .row[data-layer="13"] {
-  /* background-color: darkred; */
   margin-bottom: -920px;
 }
 
 .row[data-layer="14"] {
-  /* background-color: darkblue; */
   margin-bottom: -600px;
   justify-content: right;
 }
 
 #house-20 {
   width: 301px; 
-  margin-right: -50px;
-  margin-bottom: 120px;
+  margin-right: -30px;
+  margin-bottom: 140px;
 }
 
 #house-8 {
-  /* width: 18.1%; */
   width: 273px;
   margin-right: -70px;
   margin-bottom: 95px;
@@ -253,19 +224,15 @@ body {
 #house-22 {
   width: 401px;
   margin-right: 180px;
-  /* margin-bottom: -100px; */
 }
 
 .row[data-layer="15"] {
-  /* background-color: darkorange; */
   margin-bottom: -820px;
 }
 
 .row[data-layer="16"] {
-  /* background-color: purple; */
   justify-content: right;
   margin-bottom: -280px;
-  /* padding-top: 40px; */
 }
 
 #house-24 {
@@ -275,14 +242,12 @@ body {
 }
 
 #house-7 {
-  /* width: 20.9%; */
   width: 322px;
   margin-bottom: -55px;
   margin-right: -65px;
 }
 
 #house-2 {
-  /* width: 15.5% */
   width: 239px;
   margin-right: 30px;
   margin-bottom: 60px;
@@ -302,23 +267,22 @@ body {
 }
 
 .row[data-layer="17"] {
-  background-color: violet;
-  height: 125px;
+  height: 500px;
 }
 
 .lights {
   position: absolute;
   width: 1875px;
   margin: 0 auto;
-  /* left: 10px; */
-  top: -460px;
+  top: 60px;
   pointer-events: none;
 }
+
 .snow-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 1875px;
-  height: 100%;
+  height: 100vh;
   pointer-events: none;
   overflow: hidden;
 }
@@ -339,24 +303,22 @@ body {
 @keyframes fall {
   0% {
       transform: translateX(0) translateY(0);
-      /* opacity: 1; */
   }
   100% {
       transform: translateX(var(--drift)) translateY(100vh);
-      /* opacity: 0.7; */
   }
 }
 
 @keyframes snowflake-fall {
   0% {
-    transform: translate(0, 0); /* Start at the top */
+    transform: translate(0, 0); 
     opacity: 1;
   }
   50% {
-    transform: translate(calc(var(--drift) / 2), 50vh); /* Midway with drift */
+    transform: translate(calc(var(--drift) / 2), 50vh); 
   }
   100% {
-    transform: translate(var(--drift), 100vh); /* End at the bottom */
+    transform: translate(var(--drift), 100vh); 
     opacity: 0.7;
   }
 }
