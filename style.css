@@ -1,3 +1,9 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 html,body {
   height: 100%;
 }
@@ -5,28 +11,27 @@ html,body {
 body {
   margin: 0;
   padding: 0;
-  background-color: #f8f3e9; 
+  background-image: url(./assets/images/skyes/day.png);
+  background-repeat: no-repeat; 
+  background-size: cover; 
   font-family: 'Arial', sans-serif;
   display: flex;
   justify-content: center;
+  align-items: start;
+  /* overflow-y: auto; */
+  overflow-x: auto;
 }
 
 .advent-calendar {
-  display: block;
-  width: 1875px;
-  margin: 0 auto;
-  padding: 0 64px 0 64px;
+  width: 100%;
+  height: auto;
 
   display: grid;
   grid-template-rows: repeat(17, auto); 
   
   overflow: visible;
 
-  background-image: url(./assets/images/skyes/day.png);
-  background-repeat: no-repeat; 
-  background-size: cover; 
-  background-size: calc(100% - 155px) auto;
-  background-position: 75px top;
+  
 }
 
 .row {
@@ -63,7 +68,7 @@ body {
 #house-3 {
   width: 412px;
   margin-right: -100px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 #house-14 {
@@ -72,7 +77,7 @@ body {
 }
 #house-23 {
   width: 333px;
-  margin-bottom: -40px;
+  margin-bottom: -60px;
   margin-right: 140px;
 }
 
@@ -94,7 +99,7 @@ body {
 #house-19 {
   width: 369px;
   margin-bottom: 100px;
-  margin-left: 120px;
+  margin-left: 140px;
 }
 
 #house-1 {
@@ -105,7 +110,7 @@ body {
 
 #house-21 {
   width: 355px;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
   margin-left: -50px;
 }
 
@@ -118,7 +123,7 @@ body {
 #house-10 {
   width: 401px;
   margin-right: -80px;
-  margin-bottom: 45px;
+  margin-bottom: 55px;
 }
 
 .row[data-layer="5"] {
@@ -147,7 +152,7 @@ body {
 
 #house-6 {
   width: 239px;
-  margin-left: 115px;
+  margin-left: 125px;
 }
 
 #house-12 {
@@ -158,7 +163,7 @@ body {
 #house-4 {
   width: 325px;
   margin-left: -100px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .row[data-layer="9"] {
@@ -171,13 +176,13 @@ body {
 
 #house-18 {
   width: 556px;
-  margin-bottom: 200px;
+  margin-bottom: 220px;
   margin-left: 110px;
 }
 
 #house-15 {
   width: 342px;
-  margin-left: 340px;
+  margin-left: 370px;
   margin-bottom: -50px;
 }
 
@@ -217,8 +222,8 @@ body {
 
 #house-8 {
   width: 273px;
-  margin-right: -70px;
-  margin-bottom: 95px;
+  margin-right: -50px;
+  margin-bottom: 85px;
 }
 
 #house-22 {
@@ -249,15 +254,15 @@ body {
 
 #house-2 {
   width: 239px;
-  margin-right: 30px;
+  margin-right: 50px;
   margin-bottom: 60px;
 }
 
 #house-9 {
   width: 311px;
   margin-bottom: 120px;
-  margin-left: -80px;
-  margin-right: 40px;
+  margin-left: -90px;
+  margin-right: 50px;
 }
 
 #house-16 {
@@ -267,21 +272,51 @@ body {
 }
 
 .row[data-layer="17"] {
-  height: 500px;
+  height: 200px;
+  position: relative;
+}
+
+.bulb {
+  position: absolute;
+  top: 40px; /* Adjust distance from the top */
+  right: 70px; /* Adjust distance from the right */
+  /* width: 40px; Set the size of the bulb */
+  height: auto; /* Maintain aspect ratio */
+  cursor: pointer;
+}
+
+.bulb-arrow {
+  position: absolute;
+  top: 0; /* Adjust distance from the top */
+  right:120px; /* Adjust distance from the right */
+}
+
+.toggle {
+  position: absolute;
+  top: 15px; /* Adjust distance from the top */
+  right:170px; /* Adjust distance from the right */
+}
+
+.title {
+  position: absolute;
+  top: 20px;
+  left:70px;
 }
 
 .lights {
   position: absolute;
-  width: 1875px;
+  /* width: 1875px; */
+  width: 100%;
   margin: 0 auto;
-  top: 60px;
+  top: -250px;
   pointer-events: none;
 }
 
 .snow-container {
   position: fixed;
   top: 0;
-  width: 1875px;
+  /* width: 1875px; */
+  width: 100%;
   height: 100vh;
   pointer-events: none;
   overflow: hidden;
@@ -324,3 +359,30 @@ body {
 }
 
   
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 998; /* Below the modal */
+  display: none; /* Hidden by default */
+}
+
+/* Modal: Ensure it's above the overlay */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999; /* Above the overlay */
+  display: none; /* Hidden by default */
+}
+
+/* Modal image styling */
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  z-index: 1000; /* Highest layer */
+}

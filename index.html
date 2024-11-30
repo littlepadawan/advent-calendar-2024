@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=no">
+
   <title>Digital Advent Calendar</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -10,7 +11,10 @@
     <div class="advent-calendar">
       <!-- Row 17 (extra row at top) -->
       <div class="row top" data-layer="17">
-        
+        <img src="assets/images/ambience/bulb-off.png" alt="Toggle Lights" id="bulb" class="bulb">
+        <img src="assets/images/text/toggle-lights.png" alt="Toggle the lights" class="toggle">
+        <img src="assets/images/text/bulb-arrow.png" alt="Arrow pointing at light bulb" class="bulb-arrow">
+        <img src="assets/images/text/title-lights-off.png" alt="The text 'Adventskalender 2024' in white text" class="title">
       </div>
       <!-- Row 16 (Back-most) -->
       <div class="row houses" data-layer="16">
@@ -113,7 +117,7 @@
         
       </div>
 
-      <img src="assets/images/ambiance/lights-off.png" alt="Trees with string lights" class="lights">
+      <img src="assets/images/ambience/lights-off.png" alt="Trees with string lights" class="lights">
      
       <!-- <canvas id="snowCanvas" data-layer="-1" ></canvas> -->
       <div class="snow-container"></div>
