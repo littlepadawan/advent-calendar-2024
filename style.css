@@ -24,6 +24,7 @@ body {
 
 .advent-calendar {
   width: 100%;
+  max-width: 100%;
   height: auto;
 
   display: grid;
@@ -308,7 +309,8 @@ body {
   /* width: 1875px; */
   width: 100%;
   margin: 0 auto;
-  top: -250px;
+  top: 0;
+  transform: translateY(-6.5%);
   pointer-events: none;
 }
 
