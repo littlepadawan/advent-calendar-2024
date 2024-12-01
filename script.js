@@ -210,3 +210,17 @@ setBackgroundBasedOnTime();
 // Optional: Update the background dynamically at every hour
 setInterval(setBackgroundBasedOnTime, 3600000); // Updates every hour
 
+function scaleCalendar() {
+    const calendar = document.querySelector('.advent-calendar');
+    const wrapper = document.querySelector('.calendar-wrapper');
+    const scale = Math.min(
+        wrapper.clientWidth / calendar.offsetWidth,
+        wrapper.clientHeight / calendar.offsetHeight
+    );
+
+    calendar.style.transform = `scale(${scale})`;
+}
+
+// Call on page load and resize
+window.addEventListener('resize', scaleCalendar);
+window.addEventListener('load', scaleCalendar);
